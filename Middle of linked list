@@ -1,13 +1,32 @@
 class Solution {
 public:
+
     ListNode* middleNode(ListNode* head) {
+    
+    
         ListNode*slow=head;
+	
         ListNode*fast=head;
+	
         if(head==NULL || head->next==NULL){return head;}
+	
         while(fast!=NULL && fast->next!=NULL){
+	
             slow=slow->next;
+	    
+	    
             fast=fast->next->next;
+	    
         } return slow;
     }
 };
+
+
 Another approach
+1) We can Read the length of the linked list
+
+2) Read the lengt of the LL in a variable (count)
+
+3) traverse a pointer(a) till count1= count/2.
+
+4) return the pointer.
